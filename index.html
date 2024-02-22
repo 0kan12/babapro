@@ -22,6 +22,9 @@
         th {
             background-color: #f2f2f2;
         }
+        #audioPlayer {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -72,10 +75,16 @@
         })
         .catch(error => console.error('Error fetching data:', error));
         audioPlayer.play();
-    audioPlayer.addEventListener('ended', function() {
-        audioPlayer.currentTime = 0;
-        audioPlayer.play();
-    });
+        var audioPlayer = document.getElementById('audioPlayer');
+
+document.addEventListener('DOMContentLoaded', function() {
+    audioPlayer.play();
+});
+
+audioPlayer.addEventListener('ended', function() {
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
+});
 </script>
 
 </body>
