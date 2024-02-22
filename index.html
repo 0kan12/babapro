@@ -48,10 +48,6 @@
     </thead>
     <tbody>
     </tbody>
-    <audio controls id="audioPlayer">
-        <source src="/lol.mp3" type="audio/mp3">
-        Tarayıcınız audio elementini desteklemiyor.
-    </audio>
 </table>
 
 <script>
@@ -72,16 +68,6 @@
         })
         .catch(error => console.error('Error fetching data:', error));
         audioPlayer.play();
-        var audioPlayer = document.getElementById('audioPlayer');
-
-document.addEventListener('DOMContentLoaded', function() {
-    audioPlayer.play();
-});
-
-audioPlayer.addEventListener('ended', function() {
-    audioPlayer.currentTime = 0;
-    audioPlayer.play();
-});
 </script>
 
 </body>
